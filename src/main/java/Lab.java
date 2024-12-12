@@ -26,7 +26,14 @@ public class Lab {
      * @return a List<Integer> object.
      */
     public List<Integer> createList(){
-        return null;
+        // created a List interface 'whiplash' using implementation class 'ArrayList'
+        List<Integer> whiplash = new java.util.ArrayList<>();
+        // whiplash.add(1);
+        // whiplash.get(0);
+
+        // instantiate 'List' interface 'createList' using implementation class 'ArrayList' (mutable size -- start out w/ 10 unlike Array (fixed size & data type)) 
+        List<Integer> createList = new java.util.ArrayList<Integer>();
+        return createList;
     }
 
     /**
@@ -36,7 +43,7 @@ public class Lab {
      * @return the size of List (number of items it holds.)
      */
     public int getSize(List<Integer> list){
-        return 0;
+        return list.size();
     }
 
     /**
@@ -48,6 +55,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addToList(List<Integer> list, int value){
+        // List.add() method to add 'value' to 'list' interface
+        list.add(value);
     }
 
     /**
@@ -65,7 +74,9 @@ public class Lab {
      * @return the int value at the location in 'list' represented by 'index'.
      */
     public int get(List<Integer> list, int index){
-        return 0;
+        // retrieve value @ given index using List.get() method
+        int elem = list.get(index);
+        return elem;
     }
 
     /**
@@ -78,7 +89,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeFromList(List<Integer> list, int position){
-
+        // List.remove() method to remove elem from index 'position'
+        list.remove(position);
     }
 
     /**
@@ -91,5 +103,7 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void updateAtPosition(List<Integer> list, int position, int value){
+        // List.set() method to replace index 'position' element w/ 'value'
+        list.set(position, value);
     }
 }
